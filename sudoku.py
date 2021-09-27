@@ -30,8 +30,6 @@ class Sudoku:
         units = flatten([self.rows, self.columns, self.fields])
         for unit in units:
             if len([v for v in unit if v != 0]) != len(set(unit) - set([0])):
-                print(len([v for v in unit if v != 0]))
-                print(len(set(unit) - set([0])))
                 return True
         return False
 
