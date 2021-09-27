@@ -36,7 +36,7 @@ class Gui:
             self.__draw_solve_button('Solved')
         else:
             self.__draw_solve_button('Could not find a solution')
-        self.__draw_board()
+        self.__draw_entries()
 
     def __draw_solve_button(self, message='Solve'):
         button_text = tk.StringVar()
@@ -51,7 +51,7 @@ class Gui:
                                  background='green')
         solve_button.place(x=-2, y=950)
 
-    def __draw_board(self):
+    def __draw_entries(self):
         self.entries = []
         for i in range(9):
             row = []
@@ -90,5 +90,5 @@ class Gui:
 
     def display(self):
         self.__draw_lines()
-        self.__draw_board()
+        self.__draw_entries()
         self.__draw_solve_button()
